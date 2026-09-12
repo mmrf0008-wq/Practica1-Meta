@@ -1,0 +1,4 @@
+Archivos=
+Semilla=
+Algoritmos=
+Parametros=
