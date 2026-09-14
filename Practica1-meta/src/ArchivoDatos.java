@@ -17,15 +17,27 @@ public class ArchivoDatos {
             file = new FileReader(ruta);
             BufferedReader buffer = new BufferedReader(file);
 
-            int numero = Integer.parseInt(buffer.readLine()); //leemos el numero de filas y columnas especificado en el documento, es la primer linea
+            int dimension=0;
+            //sacamos la dimensión
+            boolean parar = false;
+            while( ((linea = buffer.readLine())!= null) || parar){
 
+                    String[] split = linea.split(":");
+                    if (split[0].equals("DIMENSION")) {
+                        String a[] = split[1].split(" ");
+                        dimension = Integer.parseInt(a[1]);
+                        parar = true;
+                    }
+
+            }
+
+            linea = buffer.readLine();
+            linea = buffer.readLine();
             //inicializamos las matrices al numero de filas y columnas indicado
-            matriz1 = new int[numero][numero];
-            matriz2 = new int [numero][numero];
-            linea = buffer.readLine(); //es necesaria la lectura de linea vacia
+            matriz1 = new int[dimension][dimension];
 
             //rellenamos las matrices con el contenido del doc
-            for(int i =0; i < numero; i++){
+            for(int i =0; i < dimension; i++){
                 linea = buffer.readLine();
                 String split[] = linea.split(" ");
                 int errores =0;
@@ -38,11 +50,11 @@ public class ArchivoDatos {
                     }
                 }
             }
-            linea = buffer.readLine(); //es necesaria la lectura de linea vacia
 
-            //lo mismo con matriz 2
 
-            for(int i =0; i < numero; i++){
+           /* //lo mismo con matriz 2
+
+            for(int i =0; i < dimension; i++){
                 linea = buffer.readLine();
                 String split[] = linea.split(" ");
                 int errores =0;
@@ -54,7 +66,7 @@ public class ArchivoDatos {
                         errores++;
                     }
                 }
-            }
+            }*/
 
 
 
@@ -63,5 +75,9 @@ public class ArchivoDatos {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public int[][] getMatriz1() {
+        return matriz1;
     }
 }

@@ -55,4 +55,11 @@ public class Configuracion {
             throw new RuntimeException(e);
         }
     }
+
+    public String getAlgoritmos(int i) {
+        return algoritmos.get(i);
+    }
+    public String getArchivo(int i) {
+        return archivos.get(i);
+    }
 }
