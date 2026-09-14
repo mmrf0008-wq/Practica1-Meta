@@ -52,24 +52,6 @@ public class ArchivoDatos {
             }
 
 
-           /* //lo mismo con matriz 2
-
-            for(int i =0; i < dimension; i++){
-                linea = buffer.readLine();
-                String split[] = linea.split(" ");
-                int errores =0;
-                for( int j =0; j < split.length; j++){
-                    //como el archivo no tiene la misma cantidad de espacios en el doc para separar hacemos esto
-                    try{
-                        matriz2[i][j-errores] = Integer.parseInt(split[j]);
-                    }catch (NumberFormatException e ){
-                        errores++;
-                    }
-                }
-            }*/
-
-
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
