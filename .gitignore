@@ -1,35 +1,35 @@
+# Archivos pesados / JDK local
+oracleJdk-27/
 
-### IntelliJ IDEA ###
-### IntelliJ IDEA ###
-out/
-Practica1-meta/.idea/
+# Carpetas de Editores e IDEs (IntelliJ, VS Code, Eclipse, NetBeans)
+.idea/
+.vscode/
 *.iml
-src/*.class
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+out/
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
 
-### VS Code ###
-.vscode/
+# Archivos compilados de Java
+*.class
 
-### Mac OS ###
-.DS_StoreoracleJdk-27/
-oracleJdk-27/
-oracleJdk-27/
-oracleJdk-27/
+# Archivos de sistema (Mac / Windows / Linux)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos temporales de Office y Editores (bloqueos de Excel/LibreOffice)
+.~lock.*
+~$*
+
+# Archivos de registro / logs
+*.log
