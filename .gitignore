@@ -1,8 +1,10 @@
+
 ### IntelliJ IDEA ###
 ### IntelliJ IDEA ###
 out/
 Practica1-meta/.idea/
 *.iml
+*.class
 
 ### Eclipse ###
 .apt_generated
