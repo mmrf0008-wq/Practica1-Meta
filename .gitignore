@@ -4,7 +4,7 @@
 out/
 Practica1-meta/.idea/
 *.iml
-*.class
+src/*.class
 
 ### Eclipse ###
 .apt_generated
