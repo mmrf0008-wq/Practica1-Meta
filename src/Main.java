@@ -11,7 +11,7 @@ public class Main {
 
 
         //comando terminal sacar logs  javac *.java && java Main >> log.txt
-
+   
         switch(config.getAlgoritmos(0)){
             case "greedy":
                 algoritmos.greedy(archivosDatos.getMatriz1());
